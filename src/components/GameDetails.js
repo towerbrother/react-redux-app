@@ -14,12 +14,13 @@ import starEmpty from "../img/star-empty.png";
 import starFull from "../img/star-full.png";
 
 const GameDetail = ({ id }) => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
-  const exitDetailHander = (e) => {
-    if (e.target.classList.contains("shadow")) {
+  const handleExitGameDetails = (e) => {
+    const element = e.target;
+    if (element.classList.contains("shadow")) {
       document.body.style.overflow = "auto";
-      history.push("/");
+      navigate("/");
     }
   };
 
@@ -58,7 +59,7 @@ const GameDetail = ({ id }) => {
   return (
     <>
       {!isLoading && (
-        <StyledCardShadow className="shadow" onClick={exitDetailHander}>
+        <StyledCardShadow className="shadow" onClick={handleExitGameDetails}>
           <StyledDetail layoutId={id}>
             <StyledStats>
               <div className="rating">
@@ -114,11 +115,12 @@ const StyledCardShadow = styled(motion.div)`
   top: 0;
   left: 0;
   z-index: 5;
+  cursor: pointer;
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #ff7676;
+    background-color: darkgrey;
   }
   &::-webkit-scrollbar-track {
     background: white;
