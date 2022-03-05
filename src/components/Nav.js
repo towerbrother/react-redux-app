@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { searchGames } from "../actions/gamesAction";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/animations";
 import logo from "../img/logo.svg";
 
 const Nav = () => {
@@ -19,7 +20,7 @@ const Nav = () => {
   };
 
   return (
-    <StyledNav>
+    <StyledNav variants={fadeIn} initial="hidden" animate="show">
       <StyledLogo onClick={() => dispatch({ type: "CLEAR_SEARCHED_GAMES" })}>
         <img src={logo} alt="logo" />
         <h1>Gameland</h1>

@@ -6,6 +6,7 @@ import GameDetails from "./GameDetails";
 import { fetchGames } from "../actions/gamesAction";
 import styled from "styled-components";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { fadeIn } from "../utils/animations";
 
 const Home = () => {
   const location = useLocation();
@@ -21,7 +22,7 @@ const Home = () => {
   );
 
   return (
-    <StyledGameList>
+    <StyledGameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
           {pathId && <GameDetails pathId={pathId} />}
