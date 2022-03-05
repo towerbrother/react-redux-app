@@ -136,8 +136,15 @@ const StyledDetails = styled(motion.div)`
   left: 10%;
   color: black;
   z-index: 10;
+
   img {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 0.8rem;
+    left: 6%;
   }
 `;
 
@@ -145,18 +152,41 @@ const StyledStats = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   img {
     width: 2rem;
     height: 2rem;
     display: inline;
   }
+
+  @media (max-width: 768px) {
+    h3 {
+      padding: 0.8rem 0rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
 `;
+
 const StyledInfo = styled(motion.div)`
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+
 const StyledPlatforms = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
+
   img {
     margin-left: 3rem;
   }
@@ -164,13 +194,26 @@ const StyledPlatforms = styled(motion.div)`
 
 const StyledMedia = styled(motion.div)`
   margin-top: 5rem;
+
   img {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
   }
 `;
 
 const StyledDescription = styled(motion.div)`
   margin: 5rem 0rem;
+
+  @media (max-width: 768px) {
+    margin: 1rem 0rem;
+
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export default GameDetails;

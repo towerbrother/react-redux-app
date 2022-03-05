@@ -48,6 +48,7 @@ const StyledNav = styled(motion.nav)`
     border: none;
     margin-top: 1rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    width: 60%;
   }
 
   button {
@@ -57,6 +58,32 @@ const StyledNav = styled(motion.nav)`
     cursor: pointer;
     background: #ff7676;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    width: 90vw;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    img {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+
+    input {
+      font-size: 1rem;
+      padding: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.4rem;
+    }
   }
 `;
 
@@ -73,6 +100,15 @@ const StyledLogo = styled(motion.div)`
 
   h1 {
     padding-left: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.6rem;
+
+    img {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
   }
 `;
 

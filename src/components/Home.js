@@ -86,16 +86,35 @@ const Home = () => {
 
 const StyledGameList = styled(motion.div)`
   padding: 0rem 5rem;
+
   h2 {
     padding: 3.5rem 0rem;
   }
+
+  @media (max-width: 768px) {
+    padding: 0rem 0.6rem;
+    width: 90vw;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 1.5rem;
+      padding: 1.5rem 0rem;
+    }
+  }
 `;
+
 const StyledGames = styled(motion.div)`
   min-height: 80vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1.2rem;
+  }
 `;
 
 export default Home;

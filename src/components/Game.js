@@ -43,10 +43,22 @@ const StyledGame = styled(motion.div)`
   border-radius: 1rem;
   cursor: pointer;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 40vh;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    h3 {
+      padding: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 
