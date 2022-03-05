@@ -15,6 +15,9 @@ export const newGamesUrl = `${BASE_URL}games?key=${API_KEY}&dates=${getDate(
   -1
 )},${getDate()}&ordering=-released&page_size=9`;
 
+export const searchedGamesUrl = (name) =>
+  `${BASE_URL}games?key=${API_KEY}&search=${name}&page_size=9`;
+
 export const getGameDetailsUrl = (id) =>
   `${BASE_URL}games/${id}.json?&key=${API_KEY}`;
 
