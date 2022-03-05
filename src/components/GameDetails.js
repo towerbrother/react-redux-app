@@ -13,7 +13,7 @@ import gamepad from "../img/gamepad.svg";
 import starEmpty from "../img/star-empty.png";
 import starFull from "../img/star-full.png";
 
-const GameDetails = ({ id }) => {
+const GameDetails = ({ pathId }) => {
   const navigate = useNavigate();
 
   const handleExitGameDetails = (e) => {
@@ -60,10 +60,10 @@ const GameDetails = ({ id }) => {
     <>
       {!isLoading && (
         <StyledCardShadow className="shadow" onClick={handleExitGameDetails}>
-          <StyledDetail layoutId={id}>
+          <StyledDetail layoutId={pathId}>
             <StyledStats>
               <div className="rating">
-                <motion.h3 layoutId={`title ${id}`}>{game.name}</motion.h3>
+                <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
                 {getStars()}
               </div>
@@ -82,7 +82,7 @@ const GameDetails = ({ id }) => {
             </StyledStats>
             <StyledMedia>
               <motion.img
-                layoutId={`image ${id}`}
+                layoutId={`image ${pathId}`}
                 src={smallImage(game.background_image, 1280)}
                 alt={game.background_image}
               />

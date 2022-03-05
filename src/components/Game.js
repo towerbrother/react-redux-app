@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Game = ({ id, name, released, image }) => {
+  const stringId = id.toString();
   const dispatch = useDispatch();
   const handleLoadGameDetails = () => {
     document.body.style.overflow = "hidden";
@@ -14,11 +15,15 @@ const Game = ({ id, name, released, image }) => {
   };
 
   return (
-    <StyledGame onClick={handleLoadGameDetails}>
+    <StyledGame layoutId={stringId} onClick={handleLoadGameDetails}>
       <Link to={`/games/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${stringId}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={smallImage(image, 640)} alt={name} />
+        <motion.img
+          layoutId={`image ${stringId}`}
+          src={smallImage(image, 640)}
+          alt={name}
+        />
       </Link>
     </StyledGame>
   );
