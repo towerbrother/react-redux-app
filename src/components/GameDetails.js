@@ -60,7 +60,7 @@ const GameDetails = ({ pathId }) => {
     <>
       {!isLoading && (
         <StyledCardShadow className="shadow" onClick={handleExitGameDetails}>
-          <StyledDetail layoutId={pathId}>
+          <StyledDetails layoutId={pathId}>
             <StyledStats>
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
@@ -99,7 +99,7 @@ const GameDetails = ({ pathId }) => {
                 />
               ))}
             </div>
-          </StyledDetail>
+          </StyledDetails>
         </StyledCardShadow>
       )}
     </>
@@ -127,7 +127,7 @@ const StyledCardShadow = styled(motion.div)`
   }
 `;
 
-const StyledDetail = styled(motion.div)`
+const StyledDetails = styled(motion.div)`
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
