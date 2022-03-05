@@ -91,7 +91,7 @@ const StyledGameList = styled(motion.div)`
     padding: 3.5rem 0rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0rem 0.6rem;
     width: 90vw;
     margin: 0 auto;
@@ -110,7 +110,7 @@ const StyledGames = styled(motion.div)`
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-column-gap: 0.5rem;
     grid-row-gap: 1.2rem;

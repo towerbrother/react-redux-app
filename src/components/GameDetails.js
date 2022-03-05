@@ -141,7 +141,7 @@ const StyledDetails = styled(motion.div)`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 90%;
     padding: 0.8rem;
     left: 6%;
@@ -159,7 +159,7 @@ const StyledStats = styled(motion.div)`
     display: inline;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     h3 {
       padding: 0.8rem 0rem;
     }
@@ -178,7 +178,7 @@ const StyledStats = styled(motion.div)`
 const StyledInfo = styled(motion.div)`
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
 `;
@@ -199,7 +199,7 @@ const StyledMedia = styled(motion.div)`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin-top: 1rem;
   }
 `;
@@ -207,7 +207,7 @@ const StyledMedia = styled(motion.div)`
 const StyledDescription = styled(motion.div)`
   margin: 5rem 0rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin: 1rem 0rem;
 
     p {

@@ -50,7 +50,7 @@ const StyledGame = styled(motion.div)`
     object-fit: cover;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     h3 {
       padding: 0.8rem;
       font-size: 1.2rem;

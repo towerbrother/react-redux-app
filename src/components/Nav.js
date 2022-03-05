@@ -60,7 +60,7 @@ const StyledNav = styled(motion.nav)`
     color: white;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 1rem;
     width: 90vw;
     margin: 0 auto;
@@ -102,7 +102,7 @@ const StyledLogo = styled(motion.div)`
     padding-left: 0.8rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0.6rem;
 
     img {
