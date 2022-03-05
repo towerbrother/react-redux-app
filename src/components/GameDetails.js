@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { smallImage } from "../utils";
+import { smallImage } from "../utils/resize";
 import playstation from "../img/playstation.svg";
 import steam from "../img/steam.svg";
 import xbox from "../img/xbox.svg";
@@ -13,7 +13,7 @@ import gamepad from "../img/gamepad.svg";
 import starEmpty from "../img/star-empty.png";
 import starFull from "../img/star-full.png";
 
-const GameDetail = ({ id }) => {
+const GameDetails = ({ id }) => {
   const navigate = useNavigate();
 
   const handleExitGameDetails = (e) => {
@@ -173,4 +173,4 @@ const StyledDescription = styled(motion.div)`
   margin: 5rem 0rem;
 `;
 
-export default GameDetail;
+export default GameDetails;
